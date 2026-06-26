@@ -1,36 +1,135 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #0f172a;
-  color: #e2e8f0;
+/* Premium Portfolio CSS (Part 1 of full stylesheet) */
+:root{
+  --bg:#060816;
+  --surface:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.12);
+  --text:#eef2ff;
+  --muted:#b8c0d9;
+  --primary:#6ee7ff;
+  --secondary:#7c5cff;
+  --radius:18px;
 }
-
-header {
-  padding: 60px;
-  text-align: center;
-  background: #111827;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ font-family:Inter,Arial,sans-serif;
+ background:radial-gradient(circle at top,#16203b,#060816 70%);
+ color:var(--text);
+ line-height:1.7;
 }
-
-h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+.background{
+ position:fixed;inset:0;pointer-events:none;
+ background:
+ radial-gradient(circle at 20% 20%,rgba(110,231,255,.12),transparent 35%),
+ radial-gradient(circle at 80% 10%,rgba(124,92,255,.14),transparent 30%);
+ filter:blur(10px);
 }
-
-section {
-  padding: 40px;
-  max-width: 900px;
-  margin: auto;
+nav{
+ position:sticky;top:0;z-index:100;
+ display:flex;justify-content:space-between;align-items:center;
+ padding:18px 8%;
+ backdrop-filter:blur(16px);
+ background:rgba(6,8,22,.55);
+ border-bottom:1px solid var(--border);
 }
-
-h2 {
-  border-left: 4px solid #38bdf8;
-  padding-left: 10px;
+.logo{font-size:1.6rem;font-weight:800}
+.logo span{color:var(--primary)}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{color:var(--muted);text-decoration:none;transition:.25s}
+nav a:hover{color:var(--primary)}
+.hero{
+ min-height:90vh;
+ display:grid;
+ grid-template-columns:1.2fr .8fr;
+ gap:48px;
+ align-items:center;
+ padding:80px 8%;
 }
-
-.card {
-  background: #1e293b;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 10px;
+.badge{
+ display:inline-block;
+ padding:8px 16px;
+ border:1px solid var(--border);
+ border-radius:999px;
+ background:var(--surface);
+ margin-bottom:24px;
+}
+.hero h1{
+ font-size:clamp(2.8rem,6vw,5rem);
+ line-height:1.05;
+ margin-bottom:24px;
+}
+.hero h1 span{
+ background:linear-gradient(90deg,var(--primary),#fff,var(--secondary));
+ -webkit-background-clip:text;
+ -webkit-text-fill-color:transparent;
+}
+.hero p{color:var(--muted);max-width:700px}
+.buttons{display:flex;gap:18px;margin-top:34px}
+.primary,.secondary{
+ text-decoration:none;
+ padding:14px 28px;
+ border-radius:999px;
+ transition:.25s;
+}
+.primary{
+ background:linear-gradient(90deg,var(--primary),var(--secondary));
+ color:#07111f;font-weight:700;
+}
+.secondary{
+ border:1px solid var(--border);
+ color:var(--text);
+}
+.primary:hover,.secondary:hover{transform:translateY(-3px)}
+.glass-card,.about-box,.card,.project-card,.contact-box{
+ background:var(--surface);
+ backdrop-filter:blur(18px);
+ border:1px solid var(--border);
+ border-radius:var(--radius);
+ box-shadow:0 12px 40px rgba(0,0,0,.25);
+}
+.glass-card{padding:28px}
+section{padding:90px 8%}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title span{color:var(--primary);text-transform:uppercase;letter-spacing:.18em}
+.grid,.projects-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+ gap:26px;
+}
+.card,.project-card{padding:28px;transition:.3s}
+.card:hover,.project-card:hover{
+ transform:translateY(-8px);
+ border-color:rgba(110,231,255,.4);
+}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.tags span{
+ padding:6px 12px;
+ border-radius:999px;
+ background:rgba(110,231,255,.12);
+ color:var(--primary);
+ font-size:.82rem;
+}
+.timeline{
+ max-width:900px;
+ margin:auto;
+ border-left:2px solid rgba(110,231,255,.3);
+ padding-left:34px;
+}
+.timeline-item{position:relative;margin:40px 0}
+.timeline-dot{
+ position:absolute;
+ left:-43px;top:8px;
+ width:16px;height:16px;border-radius:50%;
+ background:var(--primary);
+}
+.contact-box{text-align:center;padding:50px}
+footer{
+ padding:40px 8%;
+ text-align:center;
+ color:var(--muted);
+ border-top:1px solid var(--border);
+}
+@media(max-width:900px){
+.hero{grid-template-columns:1fr}
+nav ul{display:none}
 }
