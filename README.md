@@ -1,31 +1,37 @@
 # Saddam Hussain — AI Portfolio
 
-A fast, modern, single-page portfolio for an **AI Product Builder & Prompt Engineer**.
-Pure HTML / CSS / JS — no build step, no dependencies. Loads instantly and works on GitHub Pages.
+Personal portfolio for **Saddam Hussain — AI Product Builder & Automation Specialist**.
+Fast, modern, single-page site. Pure HTML / CSS / JS — no build step, no dependencies.
 
-## Features
-- Refined dark, technical-editorial design (lime + cyan accents)
-- Responsive + mobile nav menu
-- Scroll-reveal animations, animated stat counters, scroll progress bar
-- SEO + Open Graph tags for clean social link previews
+**🌐 Live:** https://midnighttalehouse-star.github.io/ai-portfolio/
+
+## About
+Former Army Captain turned self-taught AI Product Builder. Ships real, end-to-end products —
+LLM apps, automation pipelines and cross-platform tools. Relocating to Leicester, UK (Sept 2026)
+with full, unrestricted UK working rights.
+
+## Featured projects
+- **TubeForge AI Studio** — local-first AI video studio for YouTube creators ([site](https://www.tubefrogeai.app/))
+- **ProxyConnect** — leak-proof system-wide SOCKS5 proxy for Windows ([repo](https://github.com/midnighttalehouse-star/proxy_connect))
+- **RAG PDF Chat** — chat-with-your-PDFs desktop app; LangChain + Chroma + embeddings ([repo](https://github.com/midnighttalehouse-star/rag-pdf-chat))
+
+## Design
+- Light, editorial theme (white / grey, forest-green accent) with a cut-out portrait
+- Responsive + mobile nav, scroll-reveal animations, animated stat counters, scroll progress bar
+- SEO + Open Graph tags for clean social previews
 - Accessible (keyboard nav, reduced-motion support)
+- Downloadable CV (`Saddam_Hussain_CV.pdf`)
 
-## Deploy to GitHub Pages
-1. Push these files to the repo root (`index.html`, `style.css`, `script.js`).
-   ```bash
-   git add .
-   git commit -m "Polished portfolio"
-   git push
-   ```
-2. On GitHub: **Settings → Pages → Source → `main` branch / root** → Save.
-3. Your site goes live at:
-   `https://midnighttalehouse-star.github.io/ai-portfolio/`
+## Files
+| File | Purpose |
+|---|---|
+| `index.html` · `style.css` · `script.js` | The site |
+| `pics.png` | Background-removed portrait |
+| `Saddam_Hussain_CV.pdf` | Downloadable CV |
+| `linkedin-banner.png` · `linkedin-profile-photo.png` | Matching LinkedIn assets |
 
-## Customize before sharing
-Open `index.html` and update:
-- **Links** — replace the GitHub URLs with real project repos; add LinkedIn / X if you have them.
-- **Stats** — edit `data-target` values in the hero (`15+`, `8+`, `100%`).
-- **Projects** — swap in live demo links or screenshots when available.
-- **Resume** — consider adding a "Download CV" button linking to a PDF.
+## Deploy
+Hosted on GitHub Pages from the `main` branch (root). Push to `main` and it redeploys automatically.
 
-Contact: sad75075@gmail.com
+## Contact
+📧 sad75075@gmail.com · [LinkedIn](https://www.linkedin.com/in/saddam-hussain-ai/) · [GitHub](https://github.com/midnighttalehouse-star) · [X](https://x.com/saddam_h_)
