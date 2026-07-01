@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saddam Hussain — AI Product Builder & Prompt Engineer</title>
+    <title>Saddam Hussain — AI Product Builder & Automation Specialist</title>
 
     <meta name="description"
         content="Saddam Hussain — AI Product Builder, Automation & Systems Specialist and former Army officer. I ship working LLM-powered products, automation pipelines and cross-platform apps. Relocating to the UK Sept 2026 with full right to work." />
     <meta name="author" content="Saddam Hussain" />
-    <meta name="theme-color" content="#0a0b0f" />
+    <meta name="theme-color" content="#07080d" />
 
     <!-- Open Graph / social preview -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Saddam Hussain — AI Product Builder & Prompt Engineer" />
+    <meta property="og:title" content="Saddam Hussain — AI Product Builder & Automation Specialist" />
     <meta property="og:description"
-        content="I turn ideas into working AI products fast — LLM apps, prompt engineering, AI workflows & automation." />
+        content="I turn ideas into working AI products fast — LLM apps, automation workflows & shipped software. Full UK right to work." />
     <meta property="og:url" content="https://midnighttalehouse-star.github.io/ai-portfolio/" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet" />
 
     <link rel="icon"
@@ -33,123 +33,146 @@
 
 <body>
 
+    <!-- 3D WebGL background -->
+    <canvas id="bg3d" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
     <!-- Progress bar -->
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <a href="#top" class="logo">Saddam<span>.</span></a>
+        <a href="#top" class="logo" data-hover>SH<span>.</span></a>
 
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
 
         <ul id="navMenu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#contact" class="nav-cta">Hire me</a></li>
+            <li><a href="#about" data-hover>About</a></li>
+            <li><a href="#skills" data-hover>Skills</a></li>
+            <li><a href="#projects" data-hover>Work</a></li>
+            <li><a href="#process" data-hover>Process</a></li>
+            <li><a href="Saddam_Hussain_CV.pdf" download data-hover>CV ↓</a></li>
+            <li><a href="#contact" class="nav-cta" data-hover>Hire me</a></li>
         </ul>
     </nav>
 
     <!-- Hero -->
     <header class="hero" id="top">
         <div class="hero-inner">
-
-            <!-- Left: headline + CTAs + socials -->
-            <div class="hero-left reveal">
-                <span class="status-pill">
-                    <span class="status-dot"></span> Open to junior AI roles — UK
+            <div class="hero-left">
+                <span class="status-pill reveal">
+                    <span class="status-dot"></span> Open to entry-level / junior AI roles — UK · remote-friendly
                 </span>
-                <h1>AI Product<br />Builder &amp;<br />Prompt Engineer</h1>
 
-                <div class="hero-buttons">
-                    <a href="Saddam_Hussain_CV.pdf" download class="btn primary">Download CV →</a>
-                    <a href="#projects" class="btn ghost">View Work →</a>
+                <h1 class="reveal">
+                    <span class="line">I build</span>
+                    <span class="line grad">AI products</span>
+                    <span class="line">that <em>ship</em>.</span>
+                </h1>
+
+                <p class="hero-sub reveal">
+                    I'm <strong>Saddam Hussain</strong> — AI Product Builder &amp; Automation
+                    Specialist, ex-Army officer. Three live products. Zero excuses.
+                </p>
+
+                <div class="hero-buttons reveal">
+                    <a href="#projects" class="btn primary magnet" data-hover>View my work →</a>
+                    <a href="Saddam_Hussain_CV.pdf" download class="btn secondary magnet" data-hover>Download CV ↓</a>
                 </div>
 
-                <div class="socials">
-                    <span class="socials-label">Follow Me On :</span>
-                    <div class="social-icons">
-                        <a href="https://github.com/midnighttalehouse-star" target="_blank" rel="noopener"
-                            aria-label="GitHub">
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.575.106.785-.25.785-.556 0-.274-.01-1-.015-1.965-3.196.695-3.87-1.54-3.87-1.54-.523-1.33-1.278-1.685-1.278-1.685-1.044-.714.08-.7.08-.7 1.154.082 1.762 1.185 1.762 1.185 1.026 1.758 2.693 1.25 3.35.955.104-.743.402-1.25.73-1.538-2.552-.29-5.236-1.276-5.236-5.68 0-1.255.448-2.28 1.183-3.084-.119-.29-.513-1.458.112-3.04 0 0 .965-.309 3.163 1.178a11 11 0 0 1 5.76 0c2.196-1.487 3.16-1.178 3.16-1.178.626 1.582.232 2.75.114 3.04.737.804 1.18 1.83 1.18 3.084 0 4.415-2.688 5.386-5.25 5.67.413.355.78 1.056.78 2.13 0 1.538-.014 2.778-.014 3.156 0 .308.207.667.79.554A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/saddam-hussain-ai/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0Z"/></svg>
-                        </a>
-                        <a href="mailto:sad75075@gmail.com" aria-label="Email">
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm10 7 8-5H4l8 5Zm0 2.5L4 8.5V18h16V8.5l-8 5Z"/></svg>
-                        </a>
-                        <a href="https://x.com/saddam_h_" target="_blank" rel="noopener" aria-label="X">
-                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.48l8.6-9.83L0 1.15h7.6l5.24 6.93 6.06-6.93Zm-1.3 19.5h2.04L6.48 3.24H4.3L17.6 20.65Z"/></svg>
-                        </a>
+                <div class="hero-social reveal">
+                    <a href="https://www.linkedin.com/in/saddam-hussain-ai/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn" data-hover>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.2 8h4.6v14.8H.2V8zm7.6 0h4.4v2h.06c.62-1.16 2.12-2.4 4.36-2.4 4.66 0 5.52 3.07 5.52 7.06v8.14h-4.6v-7.2c0-1.72-.03-3.93-2.4-3.93-2.4 0-2.77 1.87-2.77 3.8v7.33H7.8V8z"/></svg>
+                    </a>
+                    <a href="https://github.com/midnighttalehouse-star" target="_blank" rel="noopener"
+                        aria-label="GitHub" data-hover>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.55v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.75 2.69 1.25 3.35.95.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.66.41.36.78 1.05.78 2.13v3.16c0 .3.2.66.8.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                    </a>
+                    <a href="mailto:sad75075@gmail.com" aria-label="Email" data-hover>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm10 7 8-5H4l8 5Zm0 2.5L4 8.5V18h16V8.5l-8 5Z"/></svg>
+                    </a>
+                    <a href="https://x.com/saddam_h_" target="_blank" rel="noopener" aria-label="X" data-hover>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.48l8.6-9.83L0 1.15h7.6l5.24 6.93 6.06-6.93Zm-1.3 19.5h2.04L6.48 3.24H4.3L17.6 20.65Z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right reveal">
+                <div class="photo-stage" id="photoStage">
+                    <div class="photo-glow" aria-hidden="true"></div>
+                    <div class="photo-card" id="photoCard">
+                        <img src="pics.png" alt="Portrait of Saddam Hussain" />
+                        <div class="photo-chip chip-1 float-1"><span>🎬</span> TubeForge AI — Live</div>
+                        <div class="photo-chip chip-2 float-2"><span>🛡️</span> ProxyConnect</div>
+                        <div class="photo-chip chip-3 float-3"><span>📄</span> RAG PDF Chat</div>
                     </div>
                 </div>
             </div>
-
-            <!-- Center: portrait -->
-            <div class="hero-photo reveal">
-                <img src="pics.png" alt="Portrait of Saddam Hussain" />
-            </div>
-
-            <!-- Right: intro + email + quote -->
-            <div class="hero-right reveal">
-                <p class="hero-intro">
-                    I'm <strong>Saddam Hussain</strong>, an AI Product Builder &amp; Prompt Engineer.
-                    I turn ideas into working, downloadable AI products — LLM apps, prompt
-                    engineering, automation and rapid prototyping.
-                </p>
-
-                <a class="hero-email" href="mailto:sad75075@gmail.com">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-                        stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m2 7 10 6 10-6" /></svg>
-                    sad75075@gmail.com
-                </a>
-
-                <div class="hero-quote">
-                    <span class="quote-mark">"</span>
-                    I turn ideas into products that ship.
-                </div>
-            </div>
-
         </div>
+
+        <div class="hero-stats reveal">
+            <div class="stat">
+                <span class="stat-num" data-target="3" data-suffix="">0</span>
+                <span class="stat-label">Shipped products</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num" data-target="8" data-suffix=" yrs">0</span>
+                <span class="stat-label">Leadership as Army officer</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num" data-target="30" data-suffix="+">0</span>
+                <span class="stat-label">Tools & technologies</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num" data-target="100" data-suffix="%">0</span>
+                <span class="stat-label">UK right to work</span>
+            </div>
+        </div>
+
+        <a class="scroll-cue" href="#about" aria-label="Scroll to about">
+            <span></span>
+        </a>
     </header>
 
     <main>
         <!-- About -->
         <section id="about" class="section">
             <div class="section-head reveal">
-                <span class="eyebrow">01 — About</span>
-                <h2>From idea to shipped AI product, fast.</h2>
+                <span class="eyebrow">01 / About</span>
+                <h2>Officer discipline.<br /><span class="grad">Builder speed.</span></h2>
             </div>
             <div class="about-grid">
                 <div class="reveal">
                     <p class="lead">
-                        I'm a former Army officer turned AI Product Builder. I specialise in rapid
+                        I'm a former Army Captain turned AI Product Builder. I specialise in rapid
                         prototyping, automation and end-to-end delivery — turning complex ideas into
                         working, shipped software.
                     </p>
                     <p>
-                        Eight years as a Captain in the Pakistan Army taught me discipline, risk
-                        management and how to deliver under pressure with cross-functional teams. I now
-                        channel that into building AI products: LLM development workflows (Claude Code),
-                        API integrations, multi-agent automation pipelines and low/no-code systems —
-                        backed by real version control, testing and release management.
+                        Eight years leading cross-functional teams under real pressure taught me
+                        ownership, risk management and calm execution. I now channel that into building
+                        AI products: LLM workflows (LangChain, Claude Code), RAG systems, API
+                        integrations and multi-agent automation pipelines — backed by real version
+                        control, testing and release management.
                     </p>
                     <p>
                         I'm <strong>relocating to Leicester, UK in September 2026 with full, unrestricted
                         working rights</strong> (Spouse Visa — no sponsorship required), seeking an
-                        entry-level / junior AI or automation role with a UK startup or engineering team
-                        where I can keep building and grow fast.
+                        entry-level / junior AI or automation role where I can keep building and grow fast.
                     </p>
                 </div>
                 <ul class="about-list reveal">
-                    <li><span>🎖️</span> 8 years leadership as an Army officer — delivery under pressure</li>
-                    <li><span>⚡</span> Rapid AI prototyping — idea to shipped product, fast</li>
-                    <li><span>🔄</span> Automation &amp; multi-agent workflows that remove busywork</li>
-                    <li><span>🇬🇧</span> Full UK right to work — no sponsorship required</li>
+                    <li class="glass tilt" data-hover><span>🎖️</span> 8 years leadership as an Army officer — delivery under pressure</li>
+                    <li class="glass tilt" data-hover><span>⚡</span> Rapid AI prototyping — idea to shipped product, fast</li>
+                    <li class="glass tilt" data-hover><span>🔄</span> Automation &amp; multi-agent workflows that remove busywork</li>
+                    <li class="glass tilt" data-hover><span>🇬🇧</span> Full UK right to work — no sponsorship required</li>
                 </ul>
             </div>
         </section>
@@ -157,39 +180,39 @@
         <!-- Skills -->
         <section id="skills" class="section">
             <div class="section-head reveal">
-                <span class="eyebrow">02 — Skills</span>
-                <h2>Core expertise</h2>
+                <span class="eyebrow">02 / Skills</span>
+                <h2>Core <span class="grad">expertise</span></h2>
             </div>
             <div class="skills-grid">
-                <div class="skill reveal"><span class="skill-icon">🤖</span>
+                <div class="skill glass tilt reveal" data-hover><span class="skill-icon">🤖</span>
                     <h3>Prompt Engineering</h3>
                     <p>Reliable, structured prompting for production LLM systems.</p>
                 </div>
-                <div class="skill reveal"><span class="skill-icon">🧠</span>
+                <div class="skill glass tilt reveal" data-hover><span class="skill-icon">🧠</span>
                     <h3>LLM Applications</h3>
-                    <p>RAG, tool use &amp; agents built on modern foundation models.</p>
+                    <p>RAG, tool use &amp; agents — LangChain, embeddings, vector DBs.</p>
                 </div>
-                <div class="skill reveal"><span class="skill-icon">⚡</span>
+                <div class="skill glass tilt reveal" data-hover><span class="skill-icon">⚡</span>
                     <h3>AI Automation</h3>
                     <p>End-to-end pipelines that run themselves and save hours.</p>
                 </div>
-                <div class="skill reveal"><span class="skill-icon">🔄</span>
+                <div class="skill glass tilt reveal" data-hover><span class="skill-icon">🔄</span>
                     <h3>Workflow Design</h3>
                     <p>Multi-step, multi-agent flows orchestrated for reliability.</p>
                 </div>
-                <div class="skill reveal"><span class="skill-icon">🚀</span>
+                <div class="skill glass tilt reveal" data-hover><span class="skill-icon">🚀</span>
                     <h3>Product Strategy</h3>
                     <p>Scoping, prioritising and shipping what actually matters.</p>
                 </div>
-                <div class="skill reveal"><span class="skill-icon">🎬</span>
+                <div class="skill glass tilt reveal" data-hover><span class="skill-icon">🎬</span>
                     <h3>AI Video Generation</h3>
-                    <p>Open-source video pipelines &amp; generative media workflows.</p>
+                    <p>Local motion engines &amp; generative media pipelines.</p>
                 </div>
-                <div class="skill reveal"><span class="skill-icon">📊</span>
+                <div class="skill glass tilt reveal" data-hover><span class="skill-icon">📊</span>
                     <h3>Rapid Prototyping</h3>
                     <p>Working proofs-of-concept that de-risk ideas quickly.</p>
                 </div>
-                <div class="skill reveal"><span class="skill-icon">💡</span>
+                <div class="skill glass tilt reveal" data-hover><span class="skill-icon">💡</span>
                     <h3>AI Product Design</h3>
                     <p>Designing experiences around what AI does best.</p>
                 </div>
@@ -236,11 +259,12 @@
         <!-- Projects -->
         <section id="projects" class="section">
             <div class="section-head reveal">
-                <span class="eyebrow">03 — Selected work</span>
-                <h2>Featured projects</h2>
+                <span class="eyebrow">03 / Selected work</span>
+                <h2>Real products. <span class="grad">Really shipped.</span></h2>
             </div>
             <div class="project-grid">
-                <article class="card card-feature reveal">
+                <article class="card card-feature glass tilt reveal" data-hover>
+                    <div class="card-glow" aria-hidden="true"></div>
                     <div class="card-top">
                         <h3>TubeForge AI Studio</h3>
                         <span class="card-tag live"><span class="live-dot"></span>Live</span>
@@ -252,13 +276,14 @@
                     <div class="card-stack"><span>Electron</span><span>Local GPU</span><span>LLMs</span><span>Motion engine</span><span>YouTube API</span></div>
                     <div class="card-links-row">
                         <a class="card-link" href="https://www.tubefrogeai.app/" target="_blank"
-                            rel="noopener">Visit site ↗</a>
+                            rel="noopener" data-hover>Visit site ↗</a>
                         <a class="card-link muted" href="https://github.com/midnighttalehouse-star/tubeforge-releases"
-                            target="_blank" rel="noopener">Download ↗</a>
+                            target="_blank" rel="noopener" data-hover>Download ↗</a>
                     </div>
                 </article>
 
-                <article class="card reveal">
+                <article class="card glass tilt reveal" data-hover>
+                    <div class="card-glow" aria-hidden="true"></div>
                     <div class="card-top">
                         <h3>ProxyConnect</h3>
                         <span class="card-tag">Windows · Networking</span>
@@ -268,10 +293,11 @@
                         with a fail-closed kill-switch, DNS-leak protection and IPv6 leak blocking.</p>
                     <div class="card-stack"><span>sing-box</span><span>PowerShell</span><span>TUN</span><span>GPLv3</span></div>
                     <a class="card-link" href="https://github.com/midnighttalehouse-star/proxy_connect"
-                        target="_blank" rel="noopener">View on GitHub ↗</a>
+                        target="_blank" rel="noopener" data-hover>View on GitHub ↗</a>
                 </article>
 
-                <article class="card reveal">
+                <article class="card glass tilt reveal" data-hover>
+                    <div class="card-glow" aria-hidden="true"></div>
                     <div class="card-top">
                         <h3>RAG PDF Chat</h3>
                         <span class="card-tag">RAG · LangChain</span>
@@ -281,38 +307,37 @@
                         vector database and an LLM, packaged as a one-click Windows/macOS app.</p>
                     <div class="card-stack"><span>LangChain</span><span>Chroma</span><span>Embeddings</span><span>FastEmbed</span><span>Python</span></div>
                     <a class="card-link" href="https://github.com/midnighttalehouse-star/rag-pdf-chat"
-                        target="_blank" rel="noopener">View on GitHub ↗</a>
+                        target="_blank" rel="noopener" data-hover>View on GitHub ↗</a>
                 </article>
-
             </div>
         </section>
 
-        <!-- Process / Why work with me -->
+        <!-- Process -->
         <section id="process" class="section">
             <div class="section-head reveal">
-                <span class="eyebrow">04 — How I work</span>
-                <h2>Why teams work with me</h2>
+                <span class="eyebrow">04 / How I work</span>
+                <h2>Why teams <span class="grad">work with me</span></h2>
             </div>
             <div class="process-grid">
-                <div class="process-step reveal">
+                <div class="process-step glass tilt reveal" data-hover>
                     <span class="step-num">01</span>
                     <h3>Understand the real problem</h3>
                     <p>I start with the outcome and the user — not the tech. We define what
                         "working" actually means before writing a prompt.</p>
                 </div>
-                <div class="process-step reveal">
+                <div class="process-step glass tilt reveal" data-hover>
                     <span class="step-num">02</span>
                     <h3>Prototype in days</h3>
                     <p>An AI-first workflow lets me put a working prototype in your hands
                         fast, so we learn from something real, early.</p>
                 </div>
-                <div class="process-step reveal">
+                <div class="process-step glass tilt reveal" data-hover>
                     <span class="step-num">03</span>
                     <h3>Harden &amp; automate</h3>
                     <p>Once it's proven, I make it reliable — structured prompts, guardrails,
                         and automation so it runs without babysitting.</p>
                 </div>
-                <div class="process-step reveal">
+                <div class="process-step glass tilt reveal" data-hover>
                     <span class="step-num">04</span>
                     <h3>Ship &amp; iterate</h3>
                     <p>I deliver something usable and keep improving it. Continuous
@@ -324,39 +349,50 @@
         <!-- Contact -->
         <section id="contact" class="section contact">
             <div class="contact-inner reveal">
-                <span class="eyebrow">05 — Contact</span>
-                <h2>Let's build something worth shipping.</h2>
+                <span class="eyebrow">05 / Contact</span>
+                <h2>Let's build something<br /><span class="grad">worth shipping.</span></h2>
                 <p class="lead">
                     I'm looking for an entry-level / junior AI role with a UK startup or team —
                     plus freelance and collaborations. If you need someone who learns fast and
                     ships real products, let's talk.
                 </p>
                 <div class="contact-actions">
-                    <a class="btn primary"
+                    <a class="btn primary magnet" data-hover
                         href="mailto:sad75075@gmail.com?subject=Let's%20work%20together&body=Hi%20Saddam%2C">📧
                         sad75075@gmail.com</a>
-                    <a class="btn secondary" href="https://www.linkedin.com/in/saddam-hussain-ai/" target="_blank"
-                        rel="noopener">💼 LinkedIn</a>
+                    <a class="btn secondary magnet" data-hover href="https://www.linkedin.com/in/saddam-hussain-ai/"
+                        target="_blank" rel="noopener">💼 LinkedIn</a>
                 </div>
                 <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/saddam-hussain-ai/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/saddam-hussain-ai/" target="_blank" rel="noopener" data-hover>LinkedIn</a>
                     <span aria-hidden="true">·</span>
-                    <a href="https://github.com/midnighttalehouse-star" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://github.com/midnighttalehouse-star" target="_blank" rel="noopener" data-hover>GitHub</a>
                     <span aria-hidden="true">·</span>
-                    <a href="mailto:sad75075@gmail.com">Email</a>
+                    <a href="https://x.com/saddam_h_" target="_blank" rel="noopener" data-hover>X</a>
                     <span aria-hidden="true">·</span>
-                    <a href="#top">Back to top ↑</a>
+                    <a href="mailto:sad75075@gmail.com" data-hover>Email</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="Saddam_Hussain_CV.pdf" download data-hover>Download CV</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="#top" data-hover>Back to top ↑</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© <span id="year"></span> Saddam Hussain — AI Product Builder &amp; Prompt Engineer</p>
-        <p class="footer-sub">Building the future, one shipped product at a time.</p>
+        <p>© <span id="year"></span> Saddam Hussain — AI Product Builder &amp; Automation Specialist</p>
+        <p class="footer-sub">Built with three.js · Designed in the dark, shipped in the light.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+        }
+    }
+    </script>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>
