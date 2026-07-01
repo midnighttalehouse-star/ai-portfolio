@@ -27,7 +27,7 @@ const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x07080d, 0.055);
+    scene.fog = new THREE.FogExp2(0x10141f, 0.05);
 
     const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
     camera.position.set(0, 0, 11);
@@ -36,10 +36,10 @@ const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
     const COUNT = isTouch ? 900 : 2200;
     const positions = new Float32Array(COUNT * 3);
     const colors = new Float32Array(COUNT * 3);
-    const cLime = new THREE.Color(0xc8f542);
-    const cCyan = new THREE.Color(0x3ee6d0);
-    const cViolet = new THREE.Color(0x8a7bff);
-    const cDim = new THREE.Color(0x39404f);
+    const cLime = new THREE.Color(0xcdf655);
+    const cCyan = new THREE.Color(0x43e8d2);
+    const cViolet = new THREE.Color(0x948bff);
+    const cDim = new THREE.Color(0x4a5468);
 
     for (let i = 0; i < COUNT; i++) {
         positions[i * 3] = (Math.random() - 0.5) * 46;
@@ -74,10 +74,10 @@ const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
     const knot = new THREE.Mesh(
         new THREE.TorusKnotGeometry(2.1, 0.62, 140, 18, 2, 3),
         new THREE.MeshBasicMaterial({
-            color: 0x3ee6d0,
+            color: 0x43e8d2,
             wireframe: true,
             transparent: true,
-            opacity: 0.075,
+            opacity: 0.09,
         })
     );
     knot.position.set(5.4, 0.6, -3);
@@ -86,10 +86,10 @@ const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
     const ico = new THREE.Mesh(
         new THREE.IcosahedronGeometry(1.35, 1),
         new THREE.MeshBasicMaterial({
-            color: 0xc8f542,
+            color: 0xcdf655,
             wireframe: true,
             transparent: true,
-            opacity: 0.09,
+            opacity: 0.11,
         })
     );
     ico.position.set(-6.2, -2.4, -4);
